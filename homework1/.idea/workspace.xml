@@ -26,6 +26,9 @@
         <task path="$PROJECT_DIR$">
           <activation />
         </task>
+        <task path="$PROJECT_DIR$/controller">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <expand>
@@ -41,8 +44,20 @@
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="homework1" type="f1a62948:ProjectNode" />
+                <item name="controller" type="2d1252cf:ModuleNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="homework1" type="f1a62948:ProjectNode" />
+                <item name="controller" type="2d1252cf:ModuleNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="homework1" type="f1a62948:ProjectNode" />
+                <item name="controller" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="flyway" type="c8890929:TasksNode$1" />
               </path>
             </expand>
             <select />
@@ -127,12 +142,35 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="homework1:controller [flywayMigrate]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/controller" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="flywayMigrate" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Application.Application" />
+      <item itemvalue="Gradle.homework1:controller [flywayMigrate]" />
       <item itemvalue="Gradle.homework1 [jar]" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.homework1:controller [flywayMigrate]" />
         <item itemvalue="Gradle.homework1 [jar]" />
         <item itemvalue="Application.Application" />
       </list>
@@ -152,6 +190,8 @@
       <workItem from="1665227043395" duration="483000" />
       <workItem from="1665228563845" duration="3944000" />
       <workItem from="1665248911852" duration="753000" />
+      <workItem from="1665252724253" duration="130000" />
+      <workItem from="1665254611881" duration="2399000" />
     </task>
     <servers />
   </component>

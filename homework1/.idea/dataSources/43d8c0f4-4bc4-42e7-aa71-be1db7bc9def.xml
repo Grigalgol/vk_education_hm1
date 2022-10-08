@@ -3,7 +3,7 @@
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.43">
     <root id="1">
       <DateStyle>mdy</DateStyle>
-      <IntrospectionStateNumber>798</IntrospectionStateNumber>
+      <IntrospectionStateNumber>820</IntrospectionStateNumber>
       <ServerVersion>14.5</ServerVersion>
       <StartupTime>1665056580</StartupTime>
       <TimeZones>true ACDT
@@ -804,10 +804,10 @@ false Zulu
 13388||10|C|G
 13388||-9223372036854775808|U|G
 13388||10|U|G</Grants>
-      <IntrospectionStateNumber>798</IntrospectionStateNumber>
+      <IntrospectionStateNumber>820</IntrospectionStateNumber>
       <ObjectId>24678</ObjectId>
-      <Relations>sequence|table|24693|24694|1
-sequence|table|24724|24725|1
+      <Relations>sequence|table|24755|24756|1
+sequence|table|24764|24765|1
 </Relations>
       <OwnerName>postgres</OwnerName>
     </database>
@@ -4228,138 +4228,240 @@ sequence|table|24724|24725|1
       <StateNumber>533</StateNumber>
       <OwnerName>postgres</OwnerName>
     </schema>
-    <schema id="263" parent="3" name="pg_catalog">
+    <schema id="263" parent="3" name="migrations">
+      <ObjectId>24736</ObjectId>
+      <StateNumber>799</StateNumber>
+      <OwnerName>postgres</OwnerName>
+    </schema>
+    <schema id="264" parent="3" name="pg_catalog">
       <Comment>system catalog schema</Comment>
       <ObjectId>11</ObjectId>
       <StateNumber>526</StateNumber>
       <OwnerName>postgres</OwnerName>
     </schema>
-    <schema id="264" parent="3" name="public">
+    <schema id="265" parent="3" name="public">
       <Comment>standard public schema</Comment>
       <Current>1</Current>
-      <IntrospectionStateNumber>798</IntrospectionStateNumber>
+      <IntrospectionStateNumber>820</IntrospectionStateNumber>
       <ObjectId>2200</ObjectId>
       <StateNumber>527</StateNumber>
       <OwnerName>postgres</OwnerName>
     </schema>
-    <sequence id="265" parent="264" name="author_id_seq">
+    <sequence id="266" parent="265" name="author_id_seq">
       <DataType>integer|0s</DataType>
-      <ObjectId>24693</ObjectId>
-      <StateNumber>789</StateNumber>
+      <ObjectId>24755</ObjectId>
+      <StateNumber>809</StateNumber>
       <OwnerName>postgres</OwnerName>
     </sequence>
-    <sequence id="266" parent="264" name="book_id_seq">
+    <sequence id="267" parent="265" name="book_id_seq">
       <DataType>integer|0s</DataType>
-      <ObjectId>24724</ObjectId>
-      <StateNumber>794</StateNumber>
+      <ObjectId>24764</ObjectId>
+      <StateNumber>815</StateNumber>
       <OwnerName>postgres</OwnerName>
     </sequence>
-    <table id="267" parent="264" name="author">
-      <ObjectId>24694</ObjectId>
-      <StateNumber>790</StateNumber>
+    <table id="268" parent="265" name="author">
+      <ObjectId>24756</ObjectId>
+      <StateNumber>815</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="268" parent="264" name="book">
-      <ObjectId>24725</ObjectId>
-      <StateNumber>794</StateNumber>
+    <table id="269" parent="265" name="book">
+      <ObjectId>24765</ObjectId>
+      <StateNumber>815</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <column id="269" parent="267" name="id">
+    <table id="270" parent="265" name="flyway_schema_history">
+      <ObjectId>24746</ObjectId>
+      <StateNumber>808</StateNumber>
+      <AccessMethodId>2</AccessMethodId>
+      <OwnerName>postgres</OwnerName>
+    </table>
+    <column id="271" parent="268" name="id">
       <DataType>integer|0s</DataType>
       <DefaultExpression>nextval(&apos;author_id_seq&apos;::regclass)</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <StateNumber>789</StateNumber>
+      <StateNumber>809</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="270" parent="267" name="name">
-      <DataType>varchar(50)|0s</DataType>
+    <column id="272" parent="268" name="name">
+      <DataType>text|0s</DataType>
+      <NotNull>1</NotNull>
       <Position>2</Position>
-      <StateNumber>789</StateNumber>
-      <TypeId>1043</TypeId>
+      <StateNumber>809</StateNumber>
+      <TypeId>25</TypeId>
     </column>
-    <index id="271" parent="267" name="author_pkey">
+    <index id="273" parent="268" name="author_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>24698</ObjectId>
+      <ObjectId>24762</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>789</StateNumber>
+      <StateNumber>809</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="272" parent="267" name="author_pkey">
+    <key id="274" parent="268" name="author_pkey">
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>24699</ObjectId>
+      <ObjectId>24763</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>789</StateNumber>
-      <UnderlyingIndexId>24698</UnderlyingIndexId>
+      <StateNumber>809</StateNumber>
+      <UnderlyingIndexId>24762</UnderlyingIndexId>
     </key>
-    <column id="273" parent="268" name="id">
+    <column id="275" parent="269" name="id">
       <DataType>integer|0s</DataType>
       <DefaultExpression>nextval(&apos;book_id_seq&apos;::regclass)</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <StateNumber>794</StateNumber>
+      <StateNumber>815</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="274" parent="268" name="title">
-      <DataType>varchar(50)|0s</DataType>
+    <column id="276" parent="269" name="title">
+      <DataType>text|0s</DataType>
       <Position>2</Position>
-      <StateNumber>794</StateNumber>
-      <TypeId>1043</TypeId>
+      <StateNumber>815</StateNumber>
+      <TypeId>25</TypeId>
     </column>
-    <column id="275" parent="268" name="author_id">
+    <column id="277" parent="269" name="author_id">
       <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
       <Position>3</Position>
-      <StateNumber>794</StateNumber>
+      <StateNumber>815</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="276" parent="268" name="count_pages">
+    <column id="278" parent="269" name="count_pages">
       <DataType>integer|0s</DataType>
       <Position>4</Position>
-      <StateNumber>794</StateNumber>
+      <StateNumber>815</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="277" parent="268" name="genre">
-      <DataType>varchar(20)|0s</DataType>
+    <column id="279" parent="269" name="genre">
+      <DataType>text|0s</DataType>
       <Position>5</Position>
-      <StateNumber>794</StateNumber>
-      <TypeId>1043</TypeId>
+      <StateNumber>815</StateNumber>
+      <TypeId>25</TypeId>
     </column>
-    <column id="278" parent="268" name="age">
+    <column id="280" parent="269" name="age">
       <DataType>integer|0s</DataType>
       <Position>6</Position>
-      <StateNumber>794</StateNumber>
+      <StateNumber>815</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <foreign-key id="279" parent="268" name="book_author_id_fkey">
+    <foreign-key id="281" parent="269" name="book_author_id_fkey">
       <ColNames>author_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>24731</ObjectId>
+      <ObjectId>24773</ObjectId>
       <RefColNames>id</RefColNames>
       <RefColPositions>1</RefColPositions>
-      <StateNumber>794</StateNumber>
-      <RefTableId>24694</RefTableId>
+      <StateNumber>815</StateNumber>
+      <RefTableId>24756</RefTableId>
       <RefTableName>author</RefTableName>
       <RefTableKind>table</RefTableKind>
     </foreign-key>
-    <index id="280" parent="268" name="book_pkey">
+    <index id="282" parent="269" name="book_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>24729</ObjectId>
+      <ObjectId>24771</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>794</StateNumber>
+      <StateNumber>815</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="281" parent="268" name="book_pkey">
+    <key id="283" parent="269" name="book_pkey">
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>24730</ObjectId>
+      <ObjectId>24772</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>794</StateNumber>
-      <UnderlyingIndexId>24729</UnderlyingIndexId>
+      <StateNumber>815</StateNumber>
+      <UnderlyingIndexId>24771</UnderlyingIndexId>
+    </key>
+    <column id="284" parent="270" name="installed_rank">
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StateNumber>808</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="285" parent="270" name="version">
+      <DataType>varchar(50)|0s</DataType>
+      <Position>2</Position>
+      <StateNumber>808</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="286" parent="270" name="description">
+      <DataType>varchar(200)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StateNumber>808</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="287" parent="270" name="type">
+      <DataType>varchar(20)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+      <StateNumber>808</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="288" parent="270" name="script">
+      <DataType>varchar(1000)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+      <StateNumber>808</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="289" parent="270" name="checksum">
+      <DataType>integer|0s</DataType>
+      <Position>6</Position>
+      <StateNumber>808</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="290" parent="270" name="installed_by">
+      <DataType>varchar(100)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>7</Position>
+      <StateNumber>808</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="291" parent="270" name="installed_on">
+      <DataType>timestamp|0s</DataType>
+      <DefaultExpression>now()</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>8</Position>
+      <StateNumber>808</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <column id="292" parent="270" name="execution_time">
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>9</Position>
+      <StateNumber>808</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="293" parent="270" name="success">
+      <DataType>boolean|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>10</Position>
+      <StateNumber>808</StateNumber>
+      <TypeId>16</TypeId>
+    </column>
+    <index id="294" parent="270" name="flyway_schema_history_pk">
+      <ColNames>installed_rank</ColNames>
+      <ObjectId>24752</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>808</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+    </index>
+    <index id="295" parent="270" name="flyway_schema_history_s_idx">
+      <ColNames>success</ColNames>
+      <ObjectId>24754</ObjectId>
+      <StateNumber>808</StateNumber>
+      <AccessMethodId>403</AccessMethodId>
+    </index>
+    <key id="296" parent="270" name="flyway_schema_history_pk">
+      <ObjectId>24753</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>808</StateNumber>
+      <UnderlyingIndexId>24752</UnderlyingIndexId>
     </key>
   </database-model>
 </dataSource>
