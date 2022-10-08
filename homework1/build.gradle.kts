@@ -1,5 +1,7 @@
+
 plugins {
     id("java")
+    application
 }
 
 group = "org.example"

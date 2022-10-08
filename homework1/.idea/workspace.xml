@@ -20,6 +20,37 @@
       <ProjectState />
     </projectState>
   </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="homework1" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="homework1" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="homework1" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -60,7 +91,7 @@
     ]
   }
 }</component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Application">
     <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.Application" />
       <module name="homework1.controller.main" />
@@ -75,8 +106,34 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="homework1 [jar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="jar" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Application.Application" />
+      <item itemvalue="Gradle.homework1 [jar]" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.homework1 [jar]" />
         <item itemvalue="Application.Application" />
       </list>
     </recent_temporary>
@@ -93,7 +150,8 @@
       <workItem from="1665212362031" duration="1265000" />
       <workItem from="1665213963685" duration="4321000" />
       <workItem from="1665227043395" duration="483000" />
-      <workItem from="1665228563845" duration="756000" />
+      <workItem from="1665228563845" duration="3944000" />
+      <workItem from="1665248911852" duration="753000" />
     </task>
     <servers />
   </component>

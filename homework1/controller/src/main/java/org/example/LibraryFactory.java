@@ -9,15 +9,11 @@ import java.util.List;
 
 public class LibraryFactory {
 
-    public static Library library;
+    public static Library library = getLibrary();
 
     private static final String URL = "jdbc:postgresql://localhost:5432/homework1";
     private static final String USERNAME = "postgres";
     private static final String PASSWORD = "root";
-
-    static {
-        library = getLibrary();
-    }
 
     private static Library getLibrary() {
         List<Book> books = new ArrayList<>();
